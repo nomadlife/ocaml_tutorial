@@ -1,0 +1,23 @@
+let rec map f l =
+match l with
+|[]->[]
+|hd::tl -> (f hd)::(map f tl);;
+
+
+let inc_all l = map (fun x -> x +1 ) l;;
+
+let inc_all = map (fun x -> x +1 );;
+
+
+let rec even l = 
+match l with 
+| [] -> []
+| hd::tl -> if hd mod 2 = 0 then hd::(even tl) else even tl;;
+
+let rec greater_than_five l =
+match l with
+| [] -> []
+| hd::tl ->
+if hd > 5 then hd::(greater_than_five tl)
+else greater_than_five tl
+

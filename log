@@ -1,0 +1,35 @@
+opam init --comp=4.06.1
+
+opam switch create 4.06.1
+
+opam switch 4.06.1
+
+opam config env
+
+
+*** bubblewrap for 16.04
+sudo add-apt-repository ppa:attente/test
+sudo apt-get update
+
+*** jbuilder 
+sudo add-apt-repository ppa:alessandro-strada/google-drive-ocamlfuse-beta
+sudo apt-get update
+
+===> not work 
+
+
+sudo apt-get install -y build-essential git m4 unzip rsync curl bubblewrap libev-dev libgmp-dev pkg-config libhidapi-dev jbuilder
+
+
+******* jupyter
+
+docker run -it -p 8888:8888 akabe/ocaml-jupyter-datascience
+docker run --name ocaml -it -p 8888:8888 akabe/ocaml-jupyter-datascience
+docker run --name ocaml -it -v ./:/notebooks -p 8888:8888 akabe/ocaml-jupyter-datascience
+docker run --name ocaml -it -v ~/Documents/repositories/remote/remote_repository/ocaml_tutorial:/notebooks -p 8888:8888 akabe/ocaml-jupyter-datascience
+
+**docker
+ocaml 25cd28ac3809e790731cbea8009515df7ed9e2cf35499015 
+ocaml-jupyter 0e6fb05ad1cbbcffd35d4ffe53f0ea2dcf89b7cfd30525f5
+docker exec -i -t ocaml /bin/bash
+jupyter notebook list
