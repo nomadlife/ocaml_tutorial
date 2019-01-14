@@ -33,3 +33,11 @@ ocaml 25cd28ac3809e790731cbea8009515df7ed9e2cf35499015
 ocaml-jupyter 0e6fb05ad1cbbcffd35d4ffe53f0ea2dcf89b7cfd30525f5
 docker exec -i -t ocaml /bin/bash
 jupyter notebook list
+
+****
+db folder
+/var/run/tezos/node/data
+
+docker container cp /home/jw/Downloads/context/lock.mdb alphanet_node_1:/run/tezos/node/data/context
+
+docker container cp /home/jw/Downloads/data.mdb alphanet_node_1:/run/tezos/node/data/store
