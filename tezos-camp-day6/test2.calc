@@ -1,0 +1,3 @@
+let x = 2 in 
+let f(a) = x + a in 
+let x = 3 in f(1) 

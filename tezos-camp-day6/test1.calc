@@ -1,0 +1,3 @@
+let f(a) = if (a <= 10) then f(a + 1) else a in
+let x = 3 in 
+f(x)
